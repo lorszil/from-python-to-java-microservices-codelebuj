@@ -41,6 +41,13 @@ public class ClientDaoJdbc extends ConnectionDB {
         }
     }
 
+    /**
+     *
+     * @param id
+     * @return void
+     */
+
+
     public Client findClient(String id) {
         String query = "SELECT * FROM client WHERE client_identifier = '" + id + "';";
         Client found = null;

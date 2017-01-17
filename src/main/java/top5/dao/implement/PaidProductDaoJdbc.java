@@ -38,6 +38,11 @@ public class PaidProductDaoJdbc extends ConnectionDB {
         executeQuery(query);
     }
 
+    /**
+     *
+     * @param client_identifier
+     */
+
 
     public List<PaidProducts> findPaidProducts(String client_identifier) {
         String query = "SELECT  product_id, SUM(quantity) AS quantity from paid_products INNER JOIN client ON paid_products.client_id=client.client_id WHERE client.client_identifier = '" + client_identifier + "' AND purchase_time > current_date - INTERVAL '30 days' GROUP BY product_id, client_identifier ORDER BY quantity DESC LIMIT 5;";

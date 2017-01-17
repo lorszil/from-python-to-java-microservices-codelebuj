@@ -28,6 +28,10 @@ public class APIKey {
 
     }
 
+    /**
+     *
+     * @param input
+     */
 
     public static String getMD5(String input) {
 
@@ -46,6 +50,4 @@ public class APIKey {
             throw new RuntimeException(e);
         }
     }
-
-
 }

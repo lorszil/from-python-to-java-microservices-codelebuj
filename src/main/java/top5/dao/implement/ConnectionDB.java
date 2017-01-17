@@ -26,6 +26,11 @@ public class ConnectionDB {
 
     }
 
+    /**
+     *
+     * @param query
+     */
+
     public void executeQuery(String query) {
         try (Connection connection = getConnection();
              Statement statement = connection.createStatement()
@@ -36,5 +41,4 @@ public class ConnectionDB {
             e.printStackTrace();
         }
     }
-
 }

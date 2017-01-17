@@ -36,6 +36,13 @@ public class Top5APIController {
         return "OK";
     }
 
+    /**
+     *
+     * @param request
+     * @param response
+     * @throws IOException
+     */
+
     public String getTop5(Request request, Response response) throws IOException {
         List<PaidProducts> details =  paidProductDao.findPaidProducts(request.params(":apikey"));
         GsonBuilder builder = new GsonBuilder();
@@ -43,9 +50,15 @@ public class Top5APIController {
         return gson.toJson(details);
     }
 
+    /**
+     *
+     * @param request
+     * @param response
+     * @throws IOException
+     */
+
 
     public String status(Request request, Response response) throws IOException {
         return "ok";
     }
-
 }

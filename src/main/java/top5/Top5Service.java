@@ -13,6 +13,7 @@ public class Top5Service {
     Top5APIController controller;
 
     public static void main(String[] args) {
+
         logger.debug("Starting " + Top5Service.class.getName() + "Server is running");
         Top5Service application = new Top5Service();
         application.controller = new Top5APIController();
@@ -39,7 +40,5 @@ public class Top5Service {
             response.body(String.format("Unexpected error occurred: %s", exception.getMessage()));
             logger.error("Error while processing request", exception);
         });
-
     }
-
 }
